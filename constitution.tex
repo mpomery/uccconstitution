@@ -4,6 +4,7 @@
 \documentclass[11pt]{article} % use larger type; default would be 10pt
 
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[a4paper,margin=1cm,footskip=.5cm]{geometry}
 
 %%% Examples of Article customizations
 % These packages are optional, depending whether you want the features they provide.
@@ -67,6 +68,11 @@
 \usepackage{titling} % For the subtitle
 
 \setcounter{tocdepth}{4}
+\makeatletter
+\renewcommand\tableofcontents{%
+    \@starttoc{toc}%
+}
+\makeatother
 
 \newcommand{\subtitle}[1]{
 	\posttitle{
@@ -83,7 +89,7 @@
 
 \noindent
 \begin{center}
-\LARGE{University Computer Club Inc.}\\
+\textbf{\LARGE{University Computer Club Inc.}}\\
 \Large{Constitution}
 \end{center}
 
@@ -142,7 +148,7 @@ The Executive of the Club shall consist of the following members:
 \end{enumerate}
 
 \section{Committee}
-The Club shall be governed by the Committee.
+The Club shall be governed by the Committee.\\
 The Committee of the Club shall consist of the following members:
 \begin{enumerate}
 	\item The President
@@ -160,7 +166,7 @@ The Committee of the Club shall consist of the following members:
 	\item All members must comply with all provisions relating to affiliated societies included in the Guild Statute Book.
 \end{enumerate}
 
-\section{Honarary Life Membership}
+\section{Honorary Life Membership}
 The Club in General Meeting may by a two-third majority of those present and voting confer Honorary Life Membership upon any member who has performed outstanding service to the Club.
 
 \section{Patron and Vice Patron}
@@ -234,7 +240,7 @@ The Secretary shall cause all members of the Committee to receive written or ema
 \end{enumerate}
 \subsection{Quorum}
 The quorum for a meeting of the Committee shall be four members of the Committee at least two of which are members of the Executive.
-\subsection{Decleration of Pecuniary Interest}
+\subsection{Declaration of Pecuniary Interest}
 A Committee member having any direct or indirect pecuniary interest in a contract, or proposed contract, made by, or in the contemplation of, the Committee (except if that pecuniary interest exists only by virtue of the fact that the member of the Committee is a member of a class of persons for whose benefit the Club is established), must:
 \begin{enumerate}
 \item as soon as he or she becomes aware of that interest, disclose the nature and extent of his or her interest to the Committee; and
@@ -312,7 +318,7 @@ In addition to any other provisions set out in this Constitution, or in any regu
 \section{Vacancies}
 \subsection{Resignation}
 Any officer of the Club may resign from a position by giving written notification to the Secretary at least fourteen days before that Officer's resignation takes effect.
-\subsection{Absense}
+\subsection{Absence}
 The Committee shall declare vacant the position of any member of the Committee if that member has been absent from two consecutive meetings of the Committee without giving a satisfactory explanation for that absence.
 \subsection{Election}
 If any position on the Committee becomes vacant then the Committee shall call a General Meeting for the election of a member to that position within four weeks of that position becoming vacant.
@@ -409,7 +415,7 @@ The Committee shall be the sole authority for interpreting the meaning of any of
 \section{Interim Measures}
 The Executive shall have the power to suspend such provisions of this Constitution until the 15th April, 1975 as may be expedient to the formation of a Club.
 
-\section{Commercial Explotation}
+\section{Commercial Exploitation}
 No member of the Club shall use any of the resources of the Club for direct financial gain.
 
 \section{Inspection of Constitution, records, etc.}
