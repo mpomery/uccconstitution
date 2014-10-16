@@ -30,13 +30,6 @@
 \usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
 % These packages are all incorporated in the memoir class to one degree or another...
 
-%%% HEADERS & FOOTERS
-\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
-\pagestyle{plain} % options: empty , plain , fancy
-\renewcommand{\headrulewidth}{0pt} % customise the layout...
-\lhead{}\chead{}\rhead{}
-\lfoot{}\cfoot{\thepage}\rfoot{}
-
 %%% SECTION TITLE APPEARANCE
 \usepackage{sectsty}
 \allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
@@ -82,8 +75,24 @@
 	}
 }
 
+\makeatletter
+\renewcommand\thesection{\@arabic\c@section.}
+\renewcommand\thesubsection{\@arabic\c@subsection.}
+\makeatother
+
+\let \savenumberline \numberline
+\def \numberline#1{\savenumberline{#1}}
 
 %%% END Article customizations
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage}
 
 \begin{document}
 
@@ -107,8 +116,8 @@
 
 \section{Name}
 \begin{description}
-	\item[The name of this organisation shall be:] \hfill \\
-		The University Computer Club Inc.
+	\item The name of this organisation shall be: \hfill \\
+		\large{\textbf{The University Computer Club Inc.}}
 \end{description}
 
 \section{Definitions}
